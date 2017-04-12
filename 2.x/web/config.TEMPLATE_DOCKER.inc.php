@@ -29,11 +29,8 @@
 installed = On
 
 ; The canonical URL to the OJS installation (excluding the trailing slash)
-<<<<<<< HEAD
+
 base_url = "http://localhost:5566"
-=======
-base_url = "http://localhost:5566"
->>>>>>> 1366434bc5d78466643de93a3981d5164ea60ae3
 
 ; Path to the registry directory (containing various settings files)
 ; Although the files in this directory generally do not contain any
@@ -124,17 +121,10 @@ enable_beacon = on
 [database]
 
 driver = mysql
-<<<<<<< HEAD
 host = "172.17.0.1"
 username = ojs
 password = 12345678
 name = ojs2
-=======
-host = "172.17.0.1"
-username = ojs
-password = 12345678
-name = ojs2
->>>>>>> 1366434bc5d78466643de93a3981d5164ea60ae3
 
 ; Enable persistent connections
 persistent = Off
