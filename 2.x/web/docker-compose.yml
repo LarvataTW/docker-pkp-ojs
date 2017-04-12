@@ -1,0 +1,9 @@
+ojs:
+  image: ojs_2.x
+  ports:
+    - 5566:80
+  volumes:
+    - ./files:/var/ojs/files
+    - ./config.TEMPLATE_DOCKER.inc.php:/var/www/html/config.inc.php
+   
+   

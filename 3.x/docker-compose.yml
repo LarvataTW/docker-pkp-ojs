@@ -1,0 +1,8 @@
+ojs:
+  image: ojs_3.x
+  ports:
+    - 5566:80
+  volumes:
+    - ./files:/var/ojs/files
+    - ./config.inc.php:/var/www/html/config.inc.php
+
