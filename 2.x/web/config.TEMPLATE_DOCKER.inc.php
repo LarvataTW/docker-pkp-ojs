@@ -29,7 +29,7 @@
 installed = On
 
 ; The canonical URL to the OJS installation (excluding the trailing slash)
-base_url = "http://pkp.sfu.ca/ojs"
+base_url = "http://localhost:8888"
 
 ; Path to the registry directory (containing various settings files)
 ; Although the files in this directory generally do not contain any
@@ -110,7 +110,7 @@ show_upgrade_warning = On
 
 ; Provide a unique site ID and OAI base URL to PKP for statistics and security
 ; alert purposes only.
-enable_beacon = On
+enable_beacon = on
 
 
 ;;;;;;;;;;;;;;;;;;;;;
@@ -120,9 +120,9 @@ enable_beacon = On
 [database]
 
 driver = mysql
-host = db
+host = "192.168.65.1"
 username = ojs
-password = ojs
+password = 1234
 name = ojs
 
 ; Enable persistent connections
@@ -173,7 +173,7 @@ web_cache_hours = 1
 [i18n]
 
 ; Default locale
-locale = en_US
+locale = zh_TW
 
 ; Client output/input character set
 client_charset = utf-8
@@ -203,7 +203,7 @@ charset_normalization = Off
 ; Complete path to directory to store uploaded files
 ; (This directory should not be directly web-accessible)
 ; Windows users should use forward slashes
-files_dir = files
+files_dir = /var/www/html
 
 ; Path to the directory to store public uploaded files
 ; (This directory should be web-accessible and the specified path
@@ -243,7 +243,7 @@ session_check_ip = On
 ; The encryption (hashing) algorithm to use for encrypting user passwords
 ; Valid values are: md5, sha1
 ; Note that sha1 requires PHP >= 4.3.0
-encryption = md5
+encryption = sha1
 
 ; The unique salt to use for generating password reset hashes
 salt = "YouMustSetASecretKeyHere!!"
@@ -384,7 +384,7 @@ result_cache_hours = 1
 oai = On
 
 ; OAI Repository identifier
-repository_id = ojs.pkp.sfu.ca
+repository_id = "ojs.192.168.65.1:8888"
 
 ; Maximum number of records per request to serve via OAI
 oai_max_records = 100

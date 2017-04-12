@@ -22,7 +22,7 @@ RUN a2enmod rewrite
 # workdir already set in https://raw.githubusercontent.com/docker-library/php/master/5.6/apache/Dockerfile but leave here for readability
 WORKDIR /var/www/html
 # can be overridden/set in compose file
-ARG OJS_URL_VERSION="2.4.8-1"
+ARG OJS_URL_VERSION="2.4.8-2"
 ARG OJS_PATH="."
 ARG OJS_URL_DOWNLOAD="true"
 ARG OJS_GIT_URL="NA"

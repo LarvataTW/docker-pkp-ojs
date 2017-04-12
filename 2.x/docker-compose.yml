@@ -12,25 +12,8 @@ services:
         #- OJS_GIT_URL=https://github.com/pkp/ojs.git
         #- OJS_GIT_TAG=ojs-2_4_7-1
         #-OJS_SVN_URL=http://svnurl
-    links:
-      # database is available in web under the hostnames "db" and "database"
-      - "db:database"
+    volumes:
+      - ./web/config.TEMPLATE_DOCKER.inc.php:/var/www/html/config.inc.php
+      - ./files:/var/www/html/files 
     ports:
-      - "80:80"
-    volumes_from:
-      - data
-  db:
-    image: mariadb:5
-    ports:
-      - "3306:3306"
-    environment:
-      # some configuration magic happening here, see https://github.com/docker-library/mysql/blob/master/5.7/docker-entrypoint.sh for details
-      - MYSQL_ROOT_PASSWORD=root
-      - MYSQL_USER=ojs
-      - MYSQL_PASSWORD=ojs
-      - MYSQL_DATABASE=ojs
-    volumes_from:
-      - data
-  data:
-    build:
-      context: data/.
+      - "8888:80"
