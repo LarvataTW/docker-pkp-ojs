@@ -1,9 +1,18 @@
-# Tags
-**TO DO**
+# PKP-OJS
+
+Public Knowledge Project - [Open Journal Systems](https://github.com/pkp/ojs)
+
+Open Journal Systems (OJS) is a journal management and publishing system that has been developed by the Public Knowledge Project through its federally funded efforts to expand and improve access to research.
+
+OJS 是一套以 PHP 開發的開放源碼學術期刊管理系統。
+2016 年 8 月 31 日正式發佈 OJS 3 版本，僅支援 PHP 5.3.7 以上。 
 
 # Run OJS 3.x
 
-_Not actively developed!_
+To Do:
+
+ - 將 OJS 的設定檔 config.inc.php 抽出來，放在 3.x/config.TEMPLATE.inc.php
+ - 將 3.x/config.TEMPLATE.inc.php 內關於資料庫的設定值，抽成系統環境變數
 
 ## Docker Compose
 Create a *docker-compose.yml* file and run ```docker-compose up```.
@@ -24,11 +33,6 @@ mysql:
     - MYSQL_PASSWORD=ojs
 ```
 
-Run the following commands:
-```bash
-to do...
-```
-
 # Run OJS 2.x
 
 ## Start containers
@@ -43,14 +47,11 @@ Then you can open the installation page at http://<ip of web container>/ojs/inde
 
 To change the installation path of OJS to something other than `/ojs`, please see build arguments in `docker-compose.yml`.
 
-### Web container
-...
+使用 2.x 目錄內的 docker-compose.yml 啟動，會帶起來三個 container：
 
-### Database container
-...
-
-### Data container
-...
+1. Web container (OJS 程式主體)
+2. Database container (資料庫)
+3. Data container (提供共享 Volume 的 Container)
 
 ## Configuration
 
